@@ -1,0 +1,108 @@
+/* modal.css */.modal {
+    display: none;
+    position: fixed;
+    z-index: 2; /* Alterado para garantir que o overlay fique atrás do modal */left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5); /* Fundo preto com opacidade */padding-top: 60px;
+    backdrop-filter: blur(5px); /* Adiciona o efeito de desfoque ao fundo */
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Fundo preto com opacidade */
+    backdrop-filter: blur(5px); /* Efeito de desfoque */z-index: 1; /* Fica atrás do modal */
+}
+
+.modal-content {
+    position: relative;
+    background-color: rgba(13, 17, 23, 0.9); /* Fundo escuro com opacidade */color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px; /* Tamanho fixo menor */font-size: 18px;
+    border-radius: 15px;
+    box-shadow: 0020pxrgba(0,0,0,0.6); /* Adiciona sombra interna */text-align: center; /* Ajusta o texto ao centro */overflow: hidden; /* Garante que o conteúdo não vaze */z-index: 2; /* Garante que o conteúdo fique sobre o overlay */
+}
+
+.modal-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('IMAGENS/Logotipo\ NPL\ Type.png') no-repeat center center;
+    background-size: cover;
+    opacity: 0.1; /* Opacidade da imagem de fundo */z-index: -1; /* Coloca a imagem atrás do conteúdo */background-size: contain;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-button {
+    background: #000;
+    color: #fff;
+    border: 2px solid #1e90ff;
+    padding: 8px16px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 10px;
+    display: inline-block;
+    text-align: center;
+    width: auto;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s; /* Inclui transição de box-shadow */
+}
+
+.modal-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(30, 144, 255, 0.5);
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    transition: transform 0.3s, background 0.3s;
+    z-index: 0; /* Coloca o brilho atrás do texto */
+}
+
+.modal-button:hover::before,
+.modal-button:focus::before {
+    transform: translate(-50%, -50%) scale(1);
+    background: rgba(30, 144, 255, 0.7); /* Intensifica o brilho ao passar o mouse ou focar */
+}
+
+.modal-button:hover {
+    background: #000;
+    color: #1e90ff;
+    border: 2px solid #1e90ff;
+    box-shadow: 0015px5pxrgba(30, 144, 255, 0.7); /* Adiciona efeito de brilho */
+}
+
+/* Garante que o texto esteja sobre o brilho */.modal-buttonspan {
+    position: relative;
+    z-index: 1;
+}

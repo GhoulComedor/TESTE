@@ -1,0 +1,50 @@
+/* animations.css */@keyframes rgbGlow {
+    0% {
+        box-shadow: 0030px5px red;
+    }
+    25% {
+        box-shadow: 0030px5px green;
+    }
+    50% {
+        box-shadow: 0030px5px blue;
+    }
+    75% {
+        box-shadow: 0030px5px purple;
+    }
+    100% {
+        box-shadow: 0030px5px red;
+    }
+}
+
+@keyframes rgbSpin {
+    0% {
+        box-shadow: 0020px2px red;
+    }
+    33% {
+        box-shadow: 0020px2px green;
+    }
+    66% {
+        box-shadow: 0020px2px blue;
+    }
+    100% {
+        box-shadow: 0020px2px red;
+    }
+}
+
+@keyframes blueSpin {
+    0% {
+        box-shadow: 0030px5px#00f;
+    }
+    25% {
+        box-shadow: 0030px5px#0ff;
+    }
+    50% {
+        box-shadow: 0030px5px#00f;
+    }
+    75% {
+        box-shadow: 0030px5px#0ff;
+    }
+    100% {
+        box-shadow: 0030px5px#00f;
+    }
+}

@@ -1,0 +1,51 @@
+/* header.css */header {
+    background: linear-gradient(to bottom, rgba(47, 167, 207, 0.7), rgba(173, 216, 230, 0) 90%);
+    color: #fff;
+    padding: 10px20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    backdrop-filter: blur(5px);
+}
+
+header.logo {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: none;
+}
+
+navul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+navulli {
+    margin-left: 20px;
+}
+
+navullia {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
+
+navullia::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #1e90ff;
+    transition: width 0.3s;
+}
+
+navullia:hover::after {
+    width: 100%;
+}

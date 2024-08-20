@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NorthProLeague</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="CSS/Modal.css"> <!-- Link para o CSS do modal -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section class="topspace">
+        <container class="topspace-1"></container>
+    </section>
+    <header>
+        <div class="image-container">
+            <img src="CSS/IMAGENS/Logotipo NPL Shield.png" alt="Logotipo NPL" class="logo">
+        </div>
+        <nav>
+            <ul class="page">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#events">Eventos</a></li>
+                <li><a href="#games">Jogos</a></li>
+                <li><a href="#championships">Campeonatos</a></li>
+                <!-- Aba de contato -->
+                <li><a href="contact">Contato</a></li>
+                <!-- Links para redes sociais -->
+            </ul>
+            <ul class="social-links">
+                <li><a href="https://www.instagram.com/northproleague/" class="social-icon instagram" target="_blank"> IG</a></li>
+                <li><a href="https://www.facebook.com" class="social-icon facebook" target="_blank">FB</a></li>
+                <li><a href="https://x.com/NorthProLeague" class="social-icon twitter" target="_blank"> X</a></li>
+                <li><a href="https://www.twitch.tv/northproleague" class="social-icon twitch" target="_blank"> TW</a></li>
+                <li><a href="https://www.discord.com" class="social-icon discord" target="_blank">DC</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Bem-vindo à North Pro League</h1>
+            <p>O melhor lugar para os entusiastas de e-sports!</p>
+            <a href="#" class="btn" id="toggleText">Saiba Mais</a>
+            <div id="moreInfo" class="hidden">
+                <button class="modal-button" data-modal="modal-1">Sobre a North Pro League (NPL)</button>
+                <button class="modal-button" data-modal="modal-2">Nossa História</button>
+                <button class="modal-button" data-modal="modal-3">O Crescimento e a Expansão</button>
+                <button class="modal-button" data-modal="modal-4">O Que Fazemos</button>
+                <button class="modal-button" data-modal="modal-5">Nossa Visão e Valores</button>
+                <button class="modal-button" data-modal="modal-6">Futuro da NPL</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="events" class="section">
+        <h2>Próximos Eventos</h2>
+        <div class="cards">
+            <div class="card event-1">
+                <i class="fas fa-calendar-alt"></i>
+                <h3>Evento 1</h3>
+                <p>Descrição do evento 1.</p>
+            </div>
+            <div class="card event-2">
+                <i class="fas fa-calendar-alt"></i>
+                <h3>Evento 2</h3>
+                <p>Descrição do evento 2.</p>
+            </div>
+            <div class="card event-3">
+                <i class="fas fa-calendar-alt"></i>
+                <h3>Evento 3</h3>
+                <p>Descrição do evento 3.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="games" class="section">
+        <h2>Jogos</h2>
+        <div class="cards">
+            <div class="card game-1">
+                <i class="fas fa-gamepad"></i>
+                <h3>Jogo 1</h3>
+                <p>Descrição do jogo 1.</p>
+            </div>
+            <div class="card game-2">
+                <i class="fas fa-gamepad"></i>
+                <h3>Jogo 2</h3>
+                <p>Descrição do jogo 2.</p>
+            </div>
+            <div class="card game-3">
+                <i class="fas fa-gamepad"></i>
+                <h3>Jogo 3</h3>
+                <p>Descrição do jogo 3.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="championships" class="section">
+        <h2>Campeonatos</h2>
+        <div class="cards">
+            <div class="card championship-1">
+                <i class="fas fa-trophy"></i>
+                <h3>Campeonato 1</h3>
+                <p>Descrição do campeonato 1.</p>
+            </div>
+            <div class="card championship-2">
+                <i class="fas fa-trophy"></i>
+                <h3>Campeonato 2</h3>
+                <p>Descrição do campeonato 2.</p>
+            </div>
+            <div class="card championship-3">
+                <i class="fas fa-trophy"></i>
+                <h3>Campeonato 3</h3>
+                <p>Descrição do campeonato 3.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 North Pro League. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Modals -->
+    <div id="modal-1" class="modal">
+        <div class="modal-content">
+            <span class="close" data-modal="modal-1">&times;</span>
+            <h2>Sobre a North Pro League (NPL)</h2>
+            <p>A North Pro League (NPL) é uma organização pioneira e referência no universo dos e-sports, cuja trajetória começou como um projeto acadêmico e se transformou em um pilar fundamental na cena competitiva de jogos eletrônicos. Fundada por Victor Gabriel Moreira Franco e Gabriel Vieira Artacho Peres Passarine, a NPL começou como uma iniciativa de faculdade com a visão de criar um espaço inovador para a competição e o desenvolvimento de e-sports. Hoje, a NPL é reconhecida como uma verdadeira líder no setor de jogos e competições.</p>
+        </div>
+    </div>
+
+    <div id="modal-2" class="modal">
+        <div class="modal-content">
+            <span class="close" data-modal="modal-2">&times;</span>
+            <h3>Nossa História</h3>
+            <h4>A Fundação e Visão dos Fundadores</h4>
+            <p>A jornada da North Pro League teve início nas salas de aula e laboratórios da faculdade, quando Victor Gabriel Moreira Franco, o presidente da NPL, e Gabriel Vieira Artacho Peres Passarine, seu vice-presidente, conceberam a ideia de uma liga de e-sports acadêmica. Ambos eram apaixonados por jogos eletrônicos e perceberam o potencial crescente da indústria de e-sports. O projeto inicial visava promover competições entre equipes acadêmicas, criando um ambiente de aprendizado e desenvolvimento para os participantes.</p>
+            <p>Com um espírito empreendedor e uma visão clara do futuro, Victor e Gabriel investiram seu tempo e recursos para transformar essa ideia em realidade. Eles organizaram eventos locais, desenvolveram uma estrutura de competição e rapidamente perceberam que o conceito tinha um apelo muito maior do que o previsto. O sucesso das primeiras competições acadêmicas levou à expansão da NPL para além do ambiente universitário.</p>
+        </div>
+    </div>
+
+    <div id="modal-3" class="modal">
+        <div class="modal-content">
+            <span class="close" data-modal="modal-3">&times;</span>
+            <h4>O Crescimento e a Expansão</h4>
+            <p>O sucesso inicial da NPL incentivou os fundadores a expandir sua visão. A organização rapidamente se tornou um ponto de encontro crucial para jogadores e equipes de e-sports, oferecendo uma plataforma para competições de alto nível e eventos memoráveis. Com um compromisso com a excelência e a inovação, a NPL se estabeleceu como uma referência no setor, atraindo participantes e espectadores de todo o país.</p>
+            <p>Victor e Gabriel, com suas habilidades complementares e paixão pela indústria, lideraram a transformação da NPL de um projeto acadêmico para uma organização de e-sports de renome. Sob sua liderança, a NPL se consolidou como uma entidade fundamental no cenário de e-sports, conhecida por sua organização impecável, eventos de alta qualidade e um compromisso constante com o desenvolvimento de talentos.</p>
+        </div>
+    </div>
+
+    <div id="modal-4" class="modal">
+        <div class="modal-content">
+            <span class="close" data-modal="modal-4">&times;</span>
+            <h3>O Que Fazemos</h3>
+            <ul>
+                <li><strong>Produção de Eventos de E-Sports:</strong> A NPL é especializada na criação e execução de eventos de e-sports que atraem participantes e espectadores de todo o país. Nossos eventos são meticulosamente planejados para garantir uma experiência imersiva e emocionante, com infraestrutura de ponta, transmissões ao vivo de alta qualidade e uma organização impecável.</li>
+                <li><strong>Campeonatos e Competições:</strong> Organizamos campeonatos de e-sports que cobrem uma vasta gama de jogos populares, oferecendo prêmios substanciais e reconhecimento para as equipes vencedoras. Com uma estrutura de competição bem definida e um sistema justo de classificação, nossos campeonatos garantem a máxima competitividade e emoção.</li>
+                <li><strong>Desenvolvimento de Talentos:</strong> A NPL oferece programas de treinamento e mentoring para jogadores e equipes, com o objetivo de aprimorar suas habilidades e prepará-los para competir no mais alto nível. Nossa equipe de especialistas está sempre disponível para fornecer orientação estratégica e suporte.</li>
+                <li><strong>Comunidade e Cultura:</strong> Fomentar uma comunidade engajada e apaixonada é fundamental para a NPL. Organizamos eventos comunitários, meetups e atividades que visam aproximar jogadores, fãs e patrocinadores.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal-5" class="modal">
+        <div class="modal-content">
+            <span class="close" data-modal="modal-5">&times;</span>
+            <h3>Nossa Visão e Valores</h3>
+            <ul>
+                <li><strong>Inovação:</strong> Buscamos constantemente novas formas de elevar a experiência dos e-sports, adotando tecnologias avançadas e práticas inovadoras.</li>
+                <li><strong>Excelência:</strong> Comprometemo-nos com a mais alta qualidade em todos os aspectos dos nossos eventos e operações.</li>
+                <li><strong>Inclusividade:</strong> Valorizamos a diversidade e buscamos criar um ambiente onde todos se sintam bem-vindos e respeitados.</li>
+                <li><strong>Comunidade:</strong> Estamos dedicados a fortalecer a comunidade de e-sports, promovendo interações significativas e positivas entre todos os envolvidos.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal-6" class="modal">
+        <div class="modal-content">
+            <span class="close" data-modal="modal-6">&times;</span>
+            <h3>Futuro da NPL</h3>
+            <p>À medida que continuamos a crescer e evoluir, a North Pro League está comprometida em expandir sua presença e impacto no cenário dos e-sports. Estamos sempre em busca de novas oportunidades para colaborar com parceiros estratégicos, explorar novas áreas de desenvolvimento e oferecer eventos que superem as expectativas.</p>
+            <p>Para mais informações sobre nossos eventos, campeonatos e como você pode se envolver, visite nosso site oficial ou entre em contato conosco através das redes sociais. Junte-se a nós e faça parte da revolução dos e-sports com a North Pro League!</p>
+        </div>
+    </div>
+
+    <script>
+        // Script para mostrar e esconder o texto adicional
+        document.getElementById('toggleText').onclick = function(event) {
+            event.preventDefault();
+            var moreInfo = document.getElementById('moreInfo');
+            if (moreInfo.classList.contains('hidden')) {
+                moreInfo.classList.remove('hidden');
+                moreInfo.classList.add('visible');
+                this.textContent = 'Mostrar Menos'; // Mudar o texto do botão
+            } else {
+                moreInfo.classList.remove('visible');
+                moreInfo.classList.add('hidden');
+                this.textContent = 'Saiba Mais'; // Mudar o texto do botão
+            }
+        }
+
+        // Script para abrir e fechar os modais
+        var modals = document.querySelectorAll('.modal');
+        var buttons = document.querySelectorAll('.modal-button');
+        var closeButtons = document.querySelectorAll('.close');
+
+        buttons.forEach(button => {
+            button.onclick = function() {
+                var modalId = this.getAttribute('data-modal');
+                document.getElementById(modalId).style.display = 'block';
+                document.body.style.overflow = 'hidden'; // Desativa o scroll quando o modal está aberto
+            }
+        });
+
+        closeButtons.forEach(closeButton => {
+            closeButton.onclick = function() {
+                var modalId = this.getAttribute('data-modal');
+                document.getElementById(modalId).style.display = 'none';
+                document.body.style.overflow = 'auto'; // Ativa o scroll quando o modal está fechado
+            }
+        });
+
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Ativa o scroll quando o modal é fechado clicando fora dele
+            }
+        }
+    </script>
+</body>
+</html>
+
+<div class="social-header">
+    <a href="https://www.facebook.com/REDCanids" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/redcanids/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://twitter.com/REDCanids" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+    <a href="https://www.youtube.com/channel/UCx_D-SUSPW2S0GCRdI82ayg" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+    <a href="https://discord.gg/xtmqNGqGAT" target="_blank"><i class="fa-brands fa-discord"></i></a>
+    <a href="https://www.tiktok.com/@redcanids" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+    <a href="https://www.flickr.com/photos/196382853@N05/galleries" target="_blank"><i class="fa-brands fa-flickr"></i></a>
+</div>
+
+

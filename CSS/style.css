@@ -1,0 +1,382 @@
+/* Estilos Gerais */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 60px 0 0 0; /* Espaço para o header */
+    background-color: #0a0a0a;
+    color: #ddd; 
+}
+
+
+input, textarea, button {
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 100px; /* Adiciona espaço abaixo do header */
+}
+
+input, textarea {
+    background-color: #0d1117;
+    color: #fff;
+}
+
+button {
+    background-color: #1e90ff;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #0a74da;
+}
+
+/* Header */
+header {
+    background: linear-gradient(to bottom, rgba(3, 114, 151, 0.7), rgba(0, 0, 0, 0) 85%);
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    backdrop-filter: blur(5px);
+    margin-bottom: 90px;
+}
+
+header .logo {
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: none;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0px 40px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
+
+nav .page li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #1e90ff;
+    transition: width 0.3s;
+}
+
+nav .page li a:hover::after {
+    width: 100%;
+}
+
+.social-links {
+    margin-top: 15px;   
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.8)), url('background.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 90px 0px 0px 0px;
+    position: relative;
+}
+
+.hero-content {
+    animation: fadeIn 2s;
+}
+
+.hero .btn {
+    background: #1e90ff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.hero .btn:hover {
+    background: #0a74da;
+}
+
+/* More Info Section */
+#moreInfo {
+    overflow: hidden;
+    height: 0; /* Altura inicial */
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Apenas opacity e transform */
+    transform: scaleY(0); /* Inicialmente reduzido */
+    transform-origin: top; /* Define a origem da transformação */
+    padding: 20px 20px;
+    position: relative;
+}
+
+#moreInfo.visible {
+    height: auto; /* Altura automática para acomodar o conteúdo */
+    opacity: 1;
+    transform: scaleY(1); /* Expande para a altura total */
+    padding: 20px;
+}
+
+#moreInfo.hide {
+    height: auto;
+    opacity: 1;
+    transform: scaleY(1); /* Reduzido */
+    transform-origin: bottom; /* Origem da transformação na parte inferior */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Apenas opacity e transform */
+    padding: 0 20px;
+}
+
+/* Modal */
+.modal {
+    display: flex;
+    position: fixed;
+    z-index: 2; /* Alterado para garantir que o overlay fique atrás do modal */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5); /* Fundo preto com opacidade */
+    padding-top: 60px;
+    backdrop-filter: blur(5px); /* Adiciona o efeito de desfoque ao fundo */
+}
+
+/* Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Fundo preto com opacidade */
+    backdrop-filter: blur(5px); /* Efeito de desfoque */
+    z-index: 1; /* Fica atrás do modal */
+}
+
+/* Conteúdo do Modal */
+.modal-content {
+    position: relative;
+    background-color: rgba(13, 17, 23, 0.9); /* Fundo escuro com opacidade */
+    color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px; /* Tamanho fixo menor */
+    font-size: 18px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.6); /* Adiciona sombra interna */
+    text-align: center; /* Ajusta o texto ao centro */
+    overflow: hidden; /* Garante que o conteúdo não vaze */
+    z-index: 2; /* Garante que o conteúdo fique sobre o overlay */
+}
+
+.modal-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('IMAGENS/Logotipo\ NPL\ Type.png') no-repeat center center;
+    background-size: cover;
+    opacity: 0.1; /* Opacidade da imagem de fundo */
+    z-index: -1; /* Coloca a imagem atrás do conteúdo */
+    background-size: contain;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Sections */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.card {
+    background: #0d1117;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 30px 5px #00f;
+    transition: box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.card h2, .card h3 {
+    margin-top: 0;
+}
+
+.card:hover {
+    box-shadow: 0 0 30px 5px #00f;
+}
+
+.card.event-1, .card.event-2, .card.event-3,
+.card.game-1, .card.game-2, .card.game-3,
+.card.championship-1, .card.championship-2, .card.championship-3 {
+    animation: rgbSpin 3s linear infinite;
+}
+
+.card.event-1:hover, .card.event-2:hover, .card.event-3:hover,
+.card.game-1:hover, .card.game-2:hover, .card.game-3:hover,
+.card.championship-1:hover, .card.championship-2:hover, .card.championship-3:hover {
+    animation: blueSpin 6s linear infinite;
+}
+
+/* Footer */
+footer {
+    background-color: #0d1117;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Animations */
+@keyframes rgbGlow {
+    0% {
+        box-shadow: 0 0 30px 5px red;
+    }
+    25% {
+        box-shadow: 0 0 30px 5px green;
+    }
+    50% {
+        box-shadow: 0 0 30px 5px blue;
+    }
+    75% {
+        box-shadow: 0 0 30px 5px purple;
+    }
+    100% {
+        box-shadow: 0 0 30px 5px red;
+    }
+}
+
+@keyframes rgbSpin {
+    0% {
+        box-shadow: 0 0 20px 2px red;
+    }
+    33% {
+        box-shadow: 0 0 20px 2px green;
+    }
+    66% {
+        box-shadow: 0 0 20px 2px blue;
+    }
+    100% {
+        box-shadow: 0 0 20px 2px red;
+    }
+}
+
+@keyframes blueSpin {
+    0% {
+        box-shadow: 0 0 30px 5px #00f;
+    }
+    25% {
+        box-shadow: 0 0 30px 5px #0ff;
+    }
+    50% {
+        box-shadow: 0 0 30px 5px #00f;
+    }
+    75% {
+        box-shadow: 0 0 30px 5px #0ff;
+    }
+    100% {
+        box-shadow: 0 0 30px 5px #00f;
+    }
+}
+
+/* Modal Button */
+.modal-button {
+    background: #000;
+    color: #fff;
+    border: 2px solid #1e90ff;
+    padding: 8px 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 10px;
+    display: inline-block;
+    text-align: center;
+    width: auto;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s; /* Inclui transição de box-shadow */
+}
+
+/* Efeito Neon Azul */
+.modal-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(30, 144, 255, 0.5);
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    transition: transform 0.3s, background 0.3s;
+    z-index: 0; /* Coloca o brilho atrás do texto */
+}
+
+.modal-button:hover::before,
+.modal-button:focus::before {
+    transform: translate(-50%, -50%) scale(1);
+    background: rgba(30, 144, 255, 0.7); /* Intensifica o brilho ao passar o mouse ou focar */
+}
+
+.modal-button:hover {
+    background: #000;
+    color: #1e90ff;
+    border: 2px solid #1e90ff;
+    box-shadow: 0 0 15px 5px rgba(30, 144, 255, 0.7); /* Adiciona efeito de brilho */
+}
+
+/* Garante que o texto esteja sobre o brilho */
+.modal-button span {
+    position: relative;
+    z-index: 1;
+}

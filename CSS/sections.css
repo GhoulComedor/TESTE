@@ -1,0 +1,45 @@
+/* sections.css */.section {
+    padding: 60px20px;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.card {
+    background: #0d1117;
+    border-radius: 10px;
+    box-shadow: 02px5pxrgba(0, 0, 0, 0.5);
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0030px5px#00f;
+    transition: box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.cardh2, .cardh3 {
+    margin-top: 0;
+}
+
+.card:hover {
+    box-shadow: 0030px5px#00f;
+}
+
+.card.event-1, .card.event-2, .card.event-3,
+.card.game-1, .card.game-2, .card.game-3,
+.card.championship-1, .card.championship-2, .card.championship-3 {
+    animation: rgbSpin 3s linear infinite;
+}
+
+.card.event-1:hover, .card.event-2:hover, .card.event-3:hover,
+.card.game-1:hover, .card.game-2:hover, .card.game-3:hover,
+.card.championship-1:hover, .card.championship-2:hover, .card.championship-3:hover {
+    animation: blueSpin 6s linear infinite;
+}
